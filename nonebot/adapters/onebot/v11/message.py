@@ -170,7 +170,7 @@ class MessageSegment(BaseMessageSegment["Message"]):
 
     @staticmethod
     def node_custom(
-        user_id: int, nickname: str, content: Union[str, "Message"]
+        user_id: Union[str, int], nickname: str, content: Union[str, "Message"]
     ) -> "MessageSegment":
         return MessageSegment(
             "node", {"user_id": str(user_id), "nickname": nickname, "content": content}
